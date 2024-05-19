@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Frequency Analyzer</title>
+    <link rel="stylesheet" href="frequenze.css"> <!-- Collegamento al file CSS -->
+</head>
+<body>
+    <h1>Word Frequency Analyzer</h1>
+    <textarea id="textInput" rows="10" cols="50" placeholder="Enter your text here..."></textarea><br>
+    <button onclick="analyzeText()">Analyze</button>
+    <div id="result"></div>
+
+    <script>
+        function analyzeText() {
+            let text = document.getElementById('textInput').value;
+            text = text.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()"]/g, " "); // Rimuove la punteggiatura
+            text = text.replace(/[  ]/g, " ");
+            text = text.toLowerCase(); // Converte tutto il testo in minuscolo
+
+            let words = text.split(/\s+/); // Divide il testo in parole
+            let frequency = {};
+
+            words.forEach(word => {
+                if (frequency[word]) {
+                    frequency[word]++;
+                } else {
+                    frequency[word] = 1;
+                }
+            });
+
+            let sortedWords = Object.keys(frequency).sort((a, b) => frequency[b] - frequency[a]);
+
+            let result = '<h2>Word Frequency</h2><ul>';
+            sortedWords.forEach(word => {
+                result += `<li>${word}: ${frequency[word]}</li>`;
+            });
+            result += '</ul>';
+
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>
+

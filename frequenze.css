@@ -1,0 +1,70 @@
+/* Styles for the entire body */
+body {
+    font-family: Arial, sans-serif; /* Set the font for the entire document */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding around the content */
+    background-color: #f0f0f0; /* Light grey background color */
+    color: #333; /* Dark grey text color */
+}
+
+/* Styles for the header */
+h1 {
+    text-align: center; /* Center the header text */
+    color: #4CAF50; /* Green text color for the header */
+}
+
+/* Styles for the textarea */
+textarea {
+    width: 100%; /* Full width textarea */
+    padding: 10px; /* Add padding inside the textarea */
+    margin-bottom: 20px; /* Space below the textarea */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Larger font size */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Styles for the button */
+button {
+    display: block; /* Make the button block level (full width) */
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside the button */
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Larger font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-bottom: 20px; /* Space below the button */
+}
+
+/* Change button style on hover */
+button:hover {
+    background-color: #45a049; /* Darker green background on hover */
+}
+
+/* Styles for the result section */
+#result {
+    background-color: white; /* White background for the result section */
+    padding: 20px; /* Padding inside the result section */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Styles for the word frequency list */
+#result ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+#result li {
+    padding: 5px 0; /* Space between list items */
+    border-bottom: 1px solid #eee; /* Light grey border below each item */
+}
+
+/* Last item in the list should not have a border */
+#result li:last-child {
+    border-bottom: none;
+}
+
+
